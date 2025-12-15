@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice – Verbes en français</title>
+</head>
+<body>
+
+<h2>Choisis la bonne forme du verbe</h2>
+
+<p>
+  Je <select id="q1">
+    <option value="">---</option>
+    <option value="suis">suis</option>
+    <option value="es">es</option>
+    <option value="est">est</option>
+  </select> étudiant.
+</p>
+
+<button onclick="verifier()">Vérifier</button>
+
+<p id="resultat"></p>
+
+<script>
+function verifier() {
+  const reponse = document.getElementById("q1").value;
+  const resultat = document.getElementById("resultat");
+
+  if (reponse === "suis") {
+    resultat.textContent = "✅ Correct !";
+    resultat.style.color = "green";
+  } else {
+    resultat.textContent = "❌ Réessaie";
+    resultat.style.color = "red";
+  }
+}
+</script>
+
+</body>
+</html>
